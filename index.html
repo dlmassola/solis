@@ -78,7 +78,7 @@
     <script lang="javascript">
         login()
         {
-            document.forms[0].submit();
+            window.location.href = "home.html";
         }
     </script>
 </head>
@@ -86,7 +86,7 @@
     <div class="container">
         <br />
         <img src="images/solis.jpg" alt="Logotipo" class="logo">
-        <form action="home.html" method="POST" id="form1">
+        <form>
             <input type="email" name="email" placeholder="e-mail" value="utente@gmail.com" required>
             <input type="password" name="senha" placeholder="password" value="12345678" required>
             <button type="submit" onclick="javascript: login()">Accedi</button>
