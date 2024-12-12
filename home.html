@@ -1,0 +1,238 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráficos de Barras e Pizza</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 300px;
+            height: 620px;
+            background: #fff;
+            background-image: url('images/cell_t.jpg');
+            background-size: auto;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .header {
+            background-color: #8057fe;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .chart-container {
+            width: 85%;
+            max-width: 400px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Gráfico de Pizza */
+        .pie-chart {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: conic-gradient(
+                red 0% 35%,
+                green 35% 65%,
+                yellow 65% 85%,
+                blue 85% 100%
+            );
+            margin: 0 auto 20px;
+        }
+
+        .legend {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 5px 10px;
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            border-radius: 3px;
+        }
+
+        .legend-red {
+            background-color: red;
+        }
+
+        .legend-green {
+            background-color: green;
+        }
+
+        .legend-yellow {
+            background-color: yellow;
+        }
+
+        .legend-blue {
+            background-color: blue;
+        }
+
+        /* Gráfico de Barras */
+        .bar {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        .bar-label {
+            width: 20%;
+            text-align: right;
+            margin-right: 10px;
+            font-size: 14px;
+        }
+
+        .bar-fill {
+            height: 20px;
+            border-radius: 4px;
+        }
+
+        .bar-fill[data-value="35"] {
+            width: 35%;
+            background-color: red;
+        }
+
+        .bar-fill[data-value="30"] {
+            width: 30%;
+            background-color: green;
+        }
+
+        .bar-fill[data-value="20"] {
+            width: 20%;
+            background-color: yellow;
+        }
+
+        .bar-fill[data-value="15"] {
+            width: 15%;
+            background-color: blue;
+        }
+
+        .bar-percentage {
+            margin-left: 10px;
+            font-size: 14px;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+            .content h1 {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+
+            .content img {
+                max-width: 100%;
+                height: auto;
+                margin: 20px 0;
+            }
+
+            .footer {
+                width: 100%;
+                background-color: #a9a9a9;
+                box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+                display: flex;
+                justify-content: space-around;
+                padding: 10px 0;
+            }
+
+            .footer a {
+                text-decoration: none;
+                color: #8057fe;
+                font-size: 14px;
+                text-align: center;
+            }
+
+                .footer a img {
+                    display: block;
+                    margin: 10 auto 5px;
+                    width: 24px;
+                    height: 24px;
+                }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div style="text-align: left; font-size: 18px">
+                <img src="images/photo.png" style="width: 15%;"><br>Ciao Luca Giannelli
+            </div>
+            <div class="chart-container">
+                <div class="pie-chart"></div>
+                <div class="bar">
+                    <div class="bar-fill" data-value="35"></div>
+                </div>
+                <div style="text-align: left;font-size: 10px">💡 Illuminazione: 35 kWh</div>
+        
+                <div class="bar">
+                    <div class="bar-fill" data-value="30"></div>
+                </div>
+                <div style="text-align: left;font-size: 10px">❄️ Frigorifero e Freezer: 30 kWh</div>
+        
+                <div class="bar">
+                    <div class="bar-fill" data-value="20"></div>
+                </div>
+                <div style="text-align: left;font-size: 10px">📺 TV e Elettronica: 20 kWh</div>
+        
+                <div class="bar">
+                    <div class="bar-fill" data-value="15"></div>
+                </div>
+                <div style="text-align: left;font-size: 10px">🔥 Altro: 15 kWh</div>
+            </div>
+        </div>
+        <br><br>
+        <table align="center" width="90%">
+            <tr>
+                <td>
+                    <a href="home.html">
+                        <img src="images/home.png" alt="Home" style="width: 35%;"><br>
+                    </a>
+                </td>
+                <td>
+                    <a href="profile.html">
+                        <img src="images/profile.png" alt="Profile" style="width: 35%;">
+                    </a>
+                </td>
+                <td>   
+                    <a href="support.html">
+                        <img src="images/support.png" alt="Support" style="width: 35%;">
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

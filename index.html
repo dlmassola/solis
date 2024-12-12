@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #ffffff;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 300px;
+            height: 620px;
+            background: #fff;
+            background-image: url('images/cell.jpg');
+            background-size: auto; /* Faz a imagem cobrir todo o contêiner */
+            background-position: center; /* Centraliza a imagem */
+            background-repeat: no-repeat; /* Evita que a imagem se repita */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .logo {
+            max-width: 280px;
+            margin: 0 auto 20px;
+        }
+
+        input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 75%;
+            padding: 10px;
+            background-color: #fff;
+            border: none;
+            color: #8057fe;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+            button:hover {
+                background-color: #e0d7ff;
+            }
+
+        .links {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+            .links a {
+                color: #ffffff;
+                text-decoration: none;
+            }
+
+                .links a:hover {
+                    text-decoration: underline;
+                }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <br />
+        <img src="images/solis.jpg" alt="Logotipo" class="logo">
+        <form action="/login" method="POST">
+            <input type="email" name="email" placeholder="e-mail" required>
+            <input type="password" name="senha" placeholder="password" required>
+            <button type="submit" onclick="javascript: location.href = 'home.html';">Accedi</button>
+        </form>
+        <div class="links">
+            <p><a href="/registrar">Non sei ancora registrato?</a></p>
+            <p><a href="/recuperar-senha">Hai dimenticato la  password?</a></p>
+        </div>
+    </div>
+</body>
+</html>

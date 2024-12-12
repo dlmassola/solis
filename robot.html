@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 300px;
+            height: 620px;
+            background: #fff;
+            background-image: url('images/cell_t.jpg');
+            background-size: auto;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .header {
+            background-color: #8057fe;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        iframe {
+            width: 100%; /* Largura do iframe */
+            height: 370px; /* Altura do iframe */
+            border: none; /* Remover borda do iframe */
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+            .content h1 {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+
+            .content img {
+                max-width: 100%;
+                height: auto;
+                margin: 20px 0;
+            }
+
+            .footer {
+                width: 100%;
+                background-color: #a9a9a9;
+                box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+                display: flex;
+                justify-content: space-around;
+                padding: 10px 0;
+            }
+
+            .footer a {
+                text-decoration: none;
+                color: #8057fe;
+                font-size: 14px;
+                text-align: center;
+            }
+
+                .footer a img {
+                    display: block;
+                    margin: 10 auto 5px;
+                    width: 24px;
+                    height: 24px;
+                }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div style="text-align: left; font-size: 18px">
+                <img src="images/photo.png" style="width: 15%;"><br>Ciao Luca Giannelli
+            </div>
+        </div>
+        <br><br>
+        <table width="90%" align="center">
+            <tr>
+                <td>
+                    <iframe src="https://solisbot.zapier.app" title="Página Interna"></iframe>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <table align="center" width="90%">
+            <tr>
+                <td>
+                    <a href="home.html">
+                        <img src="images/home.png" alt="Home" style="width: 35%;"><br>
+                    </a>
+                </td>
+                <td>
+                    <a href="profile.html">
+                        <img src="images/profile.png" alt="Profile" style="width: 35%;">
+                    </a>
+                </td>
+                <td>   
+                    <a href="support.html">
+                        <img src="images/support.png" alt="Support" style="width: 35%;">
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
