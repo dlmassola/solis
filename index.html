@@ -75,21 +75,15 @@
                     text-decoration: underline;
                 }
     </style>
-    <script lang="javascript">
-        login()
-        {
-            window.location.href = "home.html";
-        }
-    </script>
 </head>
 <body>
     <div class="container">
         <br />
         <img src="images/solis.jpg" alt="Logotipo" class="logo">
         <form>
-            <input type="email" name="email" placeholder="e-mail" value="utente@gmail.com" required>
-            <input type="password" name="senha" placeholder="password" value="12345678" required>
-            <button type="button" onclick="javascript: login()">Accedi</button>
+            <input type="email" name="email" placeholder="e-mail" required>
+            <input type="password" name="senha" placeholder="password" required>
+            <button type="button" onclick="javascript: window.location.href = 'home.html';">Accedi</button>
         </form>
         <div class="links">
             <p><a href="/registrar">Non sei ancora registrato?</a></p>
